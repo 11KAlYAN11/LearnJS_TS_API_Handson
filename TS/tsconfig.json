@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",   // Or "CommonJS" if not using ES modules
+      "target": "ES6",
+      "strict": true
+    }
+  }
