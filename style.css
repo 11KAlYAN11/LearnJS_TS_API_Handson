@@ -1,24 +1,28 @@
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif; /* Set font family */
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding */
 }
 
+/* Styles for the main heading */
 h1 {
-    color: #333;
+    color: #333; /* Dark gray color for the heading */
 }
 
+/* Styles for buttons */
 button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px; /* Space above buttons */
+    padding: 10px 15px; /* Padding inside buttons */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Button hover effect */
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
