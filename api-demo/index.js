@@ -1,5 +1,6 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
@@ -20,6 +21,15 @@ function logQuery(query, params) {
     console.log(`SQL Query: ${query}`);
     console.log(`Parameters: ${JSON.stringify(params)}`);
 }
+// --- ROOT Endpoint 
+
+// Serve static files like CSS from the current directory
+app.use(express.static(path.join(__dirname)));
+
+// Route to serve the HTML file
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'rootIndex.html'));
+});
 
 // --- CRUD for User ---
 app.get('/user', (req, res) => {
