@@ -36,3 +36,4 @@ curl -X POST http://localhost:3000/data \
 
 
 for All Terminal commnads plz refer "post_requirments.sh" files
+Have a great Learning Journey!...
