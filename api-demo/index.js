@@ -159,25 +159,25 @@ app.get('/data', (req, res) => {
 });
 
 app.post('/data', (req, res) => {
-    const { value } = req.body;
-    const query = `INSERT INTO data (value) VALUES (?)`;
-    logQuery(query, [value]);
-    db.run(query, [value], function (err) {
+    const { key, description } = req.body; // Using correct fields
+    const query = `INSERT INTO data (key, description) VALUES (?, ?)`;
+    logQuery(query, [key, description]);
+    db.run(query, [key, description], function (err) {
         if (err) {
             console.error('Database error:', err.message);
             return res.status(500).json({ error: 'Failed to create data.' });
         }
         console.log(`Data created with ID: ${this.lastID}`);
-        res.json({ id: this.lastID, value });
+        res.json({ id: this.lastID, key, description });  // Correct response
     });
 });
 
 app.put('/data/:id', (req, res) => {
     const id = req.params.id;
-    const { value } = req.body;
-    const query = `UPDATE data SET value = ? WHERE id = ?`;
-    logQuery(query, [value, id]);
-    db.run(query, [value, id], function (err) {
+    const { key, description } = req.body; // Using correct fields
+    const query = `UPDATE data SET key = ?, description = ? WHERE id = ?`;
+    logQuery(query, [key, description, id]);
+    db.run(query, [key, description, id], function (err) {
         if (err) {
             console.error('Database error:', err.message);
             return res.status(500).json({ error: 'Failed to update data.' });
@@ -189,6 +189,7 @@ app.put('/data/:id', (req, res) => {
         res.json({ message: 'Data updated successfully!' });
     });
 });
+
 
 app.delete('/data/:id', (req, res) => {
     const id = req.params.id;

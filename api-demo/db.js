@@ -28,11 +28,15 @@ db.serialize(() => {
         )
     `);
 
-    // Create 'data' table
+    // Drop existing 'data' table if it exists
+    db.run(`DROP TABLE IF EXISTS data`);
+
+    // Create 'data' table with the correct schema
     db.run(`
         CREATE TABLE IF NOT EXISTS data (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            value TEXT NOT NULL
+            key TEXT NOT NULL,
+            description TEXT NOT NULL
         )
     `);
 
