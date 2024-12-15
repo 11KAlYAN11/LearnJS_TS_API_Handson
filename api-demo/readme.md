@@ -14,7 +14,7 @@
     "age": 22
 }*/
 
-2) For Getting : 
+2) Via Terminal: 
 
 (For easy understaing refer post.requirments.sh file)
 - If you are posting to this endpoints via Terminal Use This:    
@@ -33,3 +33,6 @@ curl -X POST http://localhost:3000/name \
 curl -X POST http://localhost:3000/data \
 -H "Content-Type: application/json" \
 -d '{"key": "username", "description": "Sample data for username"}'
+
+
+for All Terminal commnads plz refer "post_requirments.sh" files
