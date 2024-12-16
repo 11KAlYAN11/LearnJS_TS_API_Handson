@@ -6,6 +6,17 @@ This project is designed to help users learn JavaScript and TypeScript through p
 
 ## Subdirectory Overview
 
+## API Endpoints Overview
+
+Welcome to Our API! Explore the following powerful endpoints to interact with our data:
+
+- **/user** - Manage users (Get, Create, Update, Delete) Like:  `https://localhost:8000/user`
+- **/name** - Manage names (Get, Create, Update, Delete) Like: `https://localhost:8000/name`
+- **/data** - Work with data (Create, Update, View, Delete) Like:  `https://localhost:8000/data`
+
+Feel free to explore, modify, and enjoy working with this API. Happy coding!
+
+
 ### api-demo
 The `api-demo` directory contains a simple API that can be interacted with using various methods. Below are instructions on how to use the API endpoints:
 
@@ -57,5 +68,7 @@ The `api-demo` directory contains a simple API that can be interacted with using
      -H "Content-Type: application/json" \
      -d '{"key": "username", "description": "Sample data for username"}'
      ```
-
-Have a great learning journey!
+### For PUT, DELETE (update, delete) endpoints data     
+- **/user** - Manage users (Get, Create, Update, Delete) Like:  `https://localhost:8000/user/0` Likewise as id may varies
+- **/name** - Manage names (Get, Create, Update, Delete) Like: `https://localhost:8000/name/0`
+- **/data** - Work with data (Create, Update, View, Delete) Like:  `https://localhost:8000/data/0`
