@@ -1,3 +1,6 @@
+Make sure up the server at localhost:3000 as follows:
+As we have main from *index.js* type in cmd like "node index.js" Now server will up in localhost:3000 via this you can do all CRUD operations
+
 1) If you are posting to this endpoints via POSTMAN Use This: 
 
 {
