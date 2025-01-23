@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Function to display output with a title
+# Make sure to up the server by "node index.js"
 print_section() {
     echo -e "\n==============================="
     echo "$1"
